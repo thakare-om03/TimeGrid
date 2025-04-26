@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Grid with 36 columns for the time visualization */
+.grid-cols-36 {
+  grid-template-columns: repeat(36, minmax(0, 1fr));
+}
+
+/* Add custom prose styles */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #0f172a;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose blockquote {
+  font-style: italic;
+  color: #475569;
+  border-left-color: #0d9488;
+  border-left-width: 0.25rem;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.prose blockquote footer {
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: right;
+}
+
+.prose .lead {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
